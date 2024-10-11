@@ -38,7 +38,7 @@ async function main() {
 
   // SUBJECT
   const subjectData = [
-    { name: "رياضيات" },
+    { name: "Mathematics" },
     { name: "Science" },
     { name: "English" },
     { name: "History" },

@@ -12,10 +12,13 @@ import {
   ResponsiveContainer,
 } from "recharts";
 
+// Définition des types des données pour le composant
+type AttendanceData = { name: string; present: number; absent: number };
+
 const AttendanceChart = ({
-  data,
+  data = [], // Valeur par défaut pour data
 }: {
-  data: { name: string; present: number; absent: number }[];
+  data?: AttendanceData[]; // Rendre data optionnel avec un type approprié
 }) => {
   return (
     <ResponsiveContainer width="100%" height="90%">

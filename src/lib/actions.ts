@@ -1,6 +1,4 @@
-"use server";
-
-import { revalidatePath } from "next/cache";
+"use server"
 import {
   ClassSchema,
   ExamSchema,
@@ -453,14 +451,14 @@ export const deleteExam = async (
 ) => {
   const id = data.get("id") as string;
 
-  // const { userId, sessionClaims } = auth();
-  // const role = (sessionClaims?.metadata as { role?: string })?.role;
+   const { userId, sessionClaims } = auth();
+  const role = (sessionClaims?.metadata as { role?: string })?.role;
 
   try {
     await prisma.exam.delete({
       where: {
         id: parseInt(id),
-        // ...(role === "teacher" ? { lesson: { teacherId: userId! } } : {}),
+        ...(role === "teacher" ? { lesson: { teacherId: userId! } } : {}),
       },
     });
 

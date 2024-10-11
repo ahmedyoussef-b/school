@@ -185,11 +185,9 @@ enum UserSex {
 }
 
 enum Day {
-  AL_AHD      @map("الأحد")      // Sunday
-  AL_IHTHNAIN @map("الإثنين")     // Monday
-  AL_THULATHA @map("الثلاثاء")    // Tuesday
-  AL_ARBAA    @map("الأربعاء")    // Wednesday
-  AL_KHAMIS   @map("الخميس")      // Thursday
-  AL_JUMAA    @map("الجمعة")       // Friday
-  AL_SABT     @map("السبت")        // Saturday
+  MONDAY
+  TUESDAY
+  WEDNESDAY
+  THURSDAY
+  FRIDAY
 }
